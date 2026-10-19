@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "vehicle_type": "modern_sedan",
+    "units": "meters",
+    "forward_axis": "-Y",
+    "up_axis": "+Z",
+    "full_dimensions": {
+      "width_x": 1.82,
+      "length_y": 4.40,
+      "height_z": 1.45
+    }
+  },
+  "base_parts": {
+    "engine": {
+      "prompt": "Modern automotive 4-cylinder turbo engine block with intake manifold, metallic aluminum and dark steel PBR texture, isolated 3D game asset",
+      "target_polycount": 4500,
+      "category": "mechanical",
+      "atlas_cell": [0, 0]
+    },
+    "transmission": {
+      "prompt": "Automotive automatic transmission gearbox casing, ribbed cast aluminum housing, isolated mechanical 3D asset",
+      "target_polycount": 3500,
+      "category": "mechanical",
+      "atlas_cell": [1, 0]
+    },
+    "cooling": {
+      "prompt": "Car front radiator core with dual electric cooling fans and coolant hoses, aluminum fins and black plastic shroud, isolated 3D asset",
+      "target_polycount": 3000,
+      "category": "mechanical",
+      "atlas_cell": [2, 0]
+    },
+    "fuel_system": {
+      "prompt": "Automotive underbody fuel tank with fuel pump module and supply lines, molded high density polymer and metal straps, isolated 3D asset",
+      "target_polycount": 2500,
+      "category": "mechanical",
+      "atlas_cell": [3, 0]
+    },
+    "exhaust": {
+      "prompt": "Complete car exhaust system with catalytic converter, resonator pipe, and dual rear muffler tips, brushed stainless steel, isolated 3D asset",
+      "target_polycount": 3500,
+      "category": "mechanical",
+      "atlas_cell": [0, 1]
+    },
+    "electrical": {
+      "prompt": "Automotive alternator, fuse box relay module, and main wiring harness loom with connectors, copper and black insulated cables, isolated 3D asset",
+      "target_polycount": 2500,
+      "category": "mechanical",
+      "atlas_cell": [1, 1]
+    },
+    "battery": {
+      "prompt": "12V automotive lead-acid car battery with positive and negative top terminal clamps, black and red casing, isolated 3D asset",
+      "target_polycount": 2000,
+      "category": "mechanical",
+      "atlas_cell": [2, 1]
+    },
+    "ac_climate": {
+      "prompt": "Automotive air conditioning compressor, condenser coil, and evaporator lines, aluminum and rubber hoses, isolated 3D asset",
+      "target_polycount": 2500,
+      "category": "mechanical",
+      "atlas_cell": [3, 1]
+    },
+    "suspension_base": {
+      "prompt": "Automotive independent axle suspension assembly with coilover springs, shock absorbers, control arms, and subframe, painted steel, isolated 3D asset",
+      "target_polycount": 4000,
+      "category": "mechanical",
+      "atlas_cell": [0, 2]
+    },
+    "brakes_base": {
+      "prompt": "Pair of automotive ventilated disc brake rotors with high-performance calipers and hub assembly, machined steel, isolated 3D asset",
+      "target_polycount": 3000,
+      "category": "mechanical",
+      "atlas_cell": [1, 2]
+    },
+    "steering": {
+      "prompt": "Automotive rack and pinion steering gear assembly with tie rods, steering column shaft, and steering wheel, isolated 3D asset",
+      "target_polycount": 3000,
+      "category": "mechanical",
+      "atlas_cell": [2, 2]
+    },
+    "wheel_base": {
+      "prompt": "Single modern sport alloy car wheel rim mounted with rubber radial tire featuring detailed tread pattern, dark rubber and silver rim, isolated 3D asset",
+      "target_polycount": 3500,
+      "category": "wheel",
+      "atlas_cell": null
+    },
+    "body_front": {
+      "prompt": "Front section of modern sedan car body shell including front bumper, grille, hood, front fenders, A-pillars and dark tinted front windshield glass, isolated 3D asset",
+      "target_polycount": 7000,
+      "category": "body",
+      "atlas_cell": [0, 0]
+    },
+    "body_rear": {
+      "prompt": "Rear section of modern sedan car body shell including trunk lid, rear bumper, rear quarter panels, C-pillars, dark tinted rear window glass and red taillight housings, isolated 3D asset",
+      "target_polycount": 7000,
+      "category": "body",
+      "atlas_cell": [1, 0]
+    },
+    "body_side_base": {
+      "prompt": "Left side doors, rocker panel, B-pillar, roof rail and dark tinted side windows of modern sedan car body, isolated 3D asset",
+      "target_polycount": 6000,
+      "category": "body",
+      "atlas_cell": [0, 1]
+    },
+    "lights": {
+      "prompt": "Automotive front LED projector headlight assemblies and daytime running light strips, clear polycarbonate lens and chrome reflectors, isolated 3D asset",
+      "target_polycount": 3000,
+      "category": "light",
+      "atlas_cell": null
+    },
+    "interior": {
+      "prompt": "Car cabin interior with front bucket seats, rear bench seat, center console, dashboard cockpit and door panels, dark leather and trim, isolated 3D asset",
+      "target_polycount": 6500,
+      "category": "interior",
+      "atlas_cell": null
+    }
+  },
+  "zones": [
+    {
+      "name": "engine",
+      "base_part": "engine",
+      "category": "mechanical",
+      "target_size": [0.65, 0.70, 0.62],
+      "target_location": [0.0, -1.35, 0.58],
+      "mirror_x": false
+    },
+    {
+      "name": "transmission",
+      "base_part": "transmission",
+      "category": "mechanical",
+      "target_size": [0.48, 0.75, 0.45],
+      "target_location": [0.0, -0.65, 0.44],
+      "mirror_x": false
+    },
+    {
+      "name": "cooling",
+      "base_part": "cooling",
+      "category": "mechanical",
+      "target_size": [0.85, 0.18, 0.50],
+      "target_location": [0.0, -1.92, 0.55],
+      "mirror_x": false
+    },
+    {
+      "name": "fuel_system",
+      "base_part": "fuel_system",
+      "category": "mechanical",
+      "target_size": [0.90, 0.75, 0.28],
+      "target_location": [0.0, 0.95, 0.35],
+      "mirror_x": false
+    },
+    {
+      "name": "exhaust",
+      "base_part": "exhaust",
+      "category": "mechanical",
+      "target_size": [0.75, 2.95, 0.22],
+      "target_location": [0.0, 0.55, 0.24],
+      "mirror_x": false
+    },
+    {
+      "name": "electrical",
+      "base_part": "electrical",
+      "category": "mechanical",
+      "target_size": [0.55, 0.50, 0.30],
+      "target_location": [0.28, -1.20, 0.72],
+      "mirror_x": false
+    },
+    {
+      "name": "battery",
+      "base_part": "battery",
+      "category": "mechanical",
+      "target_size": [0.28, 0.22, 0.22],
+      "target_location": [-0.48, -1.55, 0.74],
+      "mirror_x": false
+    },
+    {
+      "name": "ac_climate",
+      "base_part": "ac_climate",
+      "category": "mechanical",
+      "target_size": [0.65, 0.55, 0.35],
+      "target_location": [0.22, -1.05, 0.62],
+      "mirror_x": false
+    },
+    {
+      "name": "front_suspension",
+      "base_part": "suspension_base",
+      "category": "mechanical",
+      "target_size": [1.48, 0.55, 0.52],
+      "target_location": [0.0, -1.35, 0.42],
+      "mirror_x": false
+    },
+    {
+      "name": "rear_suspension",
+      "base_part": "suspension_base",
+      "category": "mechanical",
+      "target_size": [1.48, 0.55, 0.52],
+      "target_location": [0.0, 1.35, 0.42],
+      "mirror_x": false
+    },
+    {
+      "name": "front_brakes",
+      "base_part": "brakes_base",
+      "category": "mechanical",
+      "target_size": [1.54, 0.38, 0.38],
+      "target_location": [0.0, -1.35, 0.34],
+      "mirror_x": false
+    },
+    {
+      "name": "rear_brakes",
+      "base_part": "brakes_base",
+      "category": "mechanical",
+      "target_size": [1.54, 0.36, 0.36],
+      "target_location": [0.0, 1.35, 0.34],
+      "mirror_x": false
+    },
+    {
+      "name": "steering",
+      "base_part": "steering",
+      "category": "mechanical",
+      "target_size": [1.20, 0.85, 0.65],
+      "target_location": [-0.18, -0.95, 0.68],
+      "mirror_x": false
+    },
+    {
+      "name": "wheel_front_left",
+      "base_part": "wheel_base",
+      "category": "wheel",
+      "target_size": [0.24, 0.68, 0.68],
+      "target_location": [-0.79, -1.35, 0.34],
+      "mirror_x": false
+    },
+    {
+      "name": "wheel_front_right",
+      "base_part": "wheel_base",
+      "category": "wheel",
+      "target_size": [0.24, 0.68, 0.68],
+      "target_location": [0.79, -1.35, 0.34],
+      "mirror_x": true
+    },
+    {
+      "name": "wheel_rear_left",
+      "base_part": "wheel_base",
+      "category": "wheel",
+      "target_size": [0.24, 0.68, 0.68],
+      "target_location": [-0.79, 1.35, 0.34],
+      "mirror_x": false
+    },
+    {
+      "name": "wheel_rear_right",
+      "base_part": "wheel_base",
+      "category": "wheel",
+      "target_size": [0.24, 0.68, 0.68],
+      "target_location": [0.79, 1.35, 0.34],
+      "mirror_x": true
+    },
+    {
+      "name": "body_front",
+      "base_part": "body_front",
+      "category": "body",
+      "target_size": [1.80, 1.65, 1.18],
+      "target_location": [0.0, -1.375, 0.74],
+      "mirror_x": false
+    },
+    {
+      "name": "body_rear",
+      "base_part": "body_rear",
+      "category": "body",
+      "target_size": [1.80, 1.55, 1.18],
+      "target_location": [0.0, 1.425, 0.74],
+      "mirror_x": false
+    },
+    {
+      "name": "body_left",
+      "base_part": "body_side_base",
+      "category": "body",
+      "target_size": [0.42, 2.25, 1.26],
+      "target_location": [-0.70, 0.0, 0.82],
+      "mirror_x": false
+    },
+    {
+      "name": "body_right",
+      "base_part": "body_side_base",
+      "category": "body",
+      "target_size": [0.42, 2.25, 1.26],
+      "target_location": [0.70, 0.0, 0.82],
+      "mirror_x": true
+    },
+    {
+      "name": "lights",
+      "base_part": "lights",
+      "category": "light",
+      "target_size": [1.62, 0.35, 0.26],
+      "target_location": [0.0, -2.02, 0.68],
+      "mirror_x": false
+    },
+    {
+      "name": "interior",
+      "base_part": "interior",
+      "category": "interior",
+      "target_size": [1.45, 1.95, 0.92],
+      "target_location": [0.0, 0.05, 0.72],
+      "mirror_x": false
+    }
+  ]
+}
