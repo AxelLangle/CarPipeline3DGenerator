@@ -1,0 +1,16 @@
+# Entorno virtual y caché de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Variables de entorno
+.env
+
+# Salidas generadas y cachés de modelos 3D
+output/
+*.glb
+*.png
+manifest.json
