@@ -62,16 +62,16 @@ class MeshyClient:
         api_key: Optional[str] = None,
         cache_dir: str | Path = "output/_base_cache",
         zones_dir: str | Path = "output/zones",
-        max_workers: int = 4,
-        poll_interval: float = 10.0,
-        max_retries: int = 5,
+        max_workers: Optional[int] = None,
+        poll_interval: Optional[float] = None,
+        max_retries: Optional[int] = None,
     ) -> None:
         self.api_key = api_key or os.getenv("MESHY_API_KEY", "")
         self.cache_dir = Path(cache_dir)
         self.zones_dir = Path(zones_dir)
-        self.max_workers = max_workers
-        self.poll_interval = poll_interval
-        self.max_retries = max_retries
+        self.max_workers = int(os.getenv("MESHY_MAX_WORKERS", 2)) if max_workers is None else max_workers
+        self.poll_interval = float(os.getenv("MESHY_POLL_INTERVAL", 10.0)) if poll_interval is None else poll_interval
+        self.max_retries = int(os.getenv("MESHY_MAX_RETRIES", 25)) if max_retries is None else max_retries
         self.manifest_path = self.cache_dir / "manifest.json"
         self._lock = threading.Lock()
 
@@ -118,7 +118,7 @@ class MeshyClient:
         json_payload: Optional[Dict[str, Any]] = None,
         stream: bool = False,
     ) -> requests.Response:
-        backoff = 2.0
+        backoff = 3.0
         for attempt in range(1, self.max_retries + 1):
             try:
                 headers = self._headers() if url.startswith(MESHY_API_URL) else {}
@@ -130,17 +130,25 @@ class MeshyClient:
                     timeout=60,
                     stream=stream,
                 )
+                is_rate_or_concurrency = False
                 if resp.status_code == 429 or resp.status_code >= 500:
+                    is_rate_or_concurrency = True
+                elif resp.status_code in (400, 409):
+                    resp_text = resp.text.lower()
+                    if any(term in resp_text for term in ["concurrent", "queue", "rate limit", "too many"]):
+                        is_rate_or_concurrency = True
+
+                if is_rate_or_concurrency:
                     logger.warning(
-                        "HTTP %d en %s (intento %d/%d). Reintentando en %.1fs...",
+                        "Límite de concurrencia o cola en Meshy AI (%d: %s). Reintentando en %.1fs (intento %d/%d)...",
                         resp.status_code,
-                        url,
+                        resp.text[:100].strip(),
+                        backoff,
                         attempt,
                         self.max_retries,
-                        backoff,
                     )
                     time.sleep(backoff)
-                    backoff *= 2.0
+                    backoff = min(backoff * 1.5, 20.0)
                     continue
                 resp.raise_for_status()
                 return resp
@@ -156,8 +164,8 @@ class MeshyClient:
                     backoff,
                 )
                 time.sleep(backoff)
-                backoff *= 2.0
-        raise MeshyClientError(f"Se agotaron los reintentos para {url}")
+                backoff = min(backoff * 1.5, 20.0)
+        raise MeshyClientError(f"Se agotaron los reintentos ({self.max_retries}) para {url}")
 
     def create_preview_task(self, prompt: str, target_polycount: int = 4000) -> str:
         """Inicia una tarea en modo preview en Meshy v2 y devuelve su task_id."""
