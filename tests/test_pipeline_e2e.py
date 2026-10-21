@@ -98,17 +98,17 @@ def test_meshy_client_caching_and_symmetry(tmp_path: Path) -> None:
         assert mock_req.call_count == first_call_count
 
 
-def test_full_pipeline_e2e_blender_and_validator() -> None:
+def test_full_pipeline_e2e_blender_and_validator(tmp_path: Path) -> None:
     """
     Prueba End-to-End completa:
-    1. Genera los 17 GLBs sintéticos en output/_base_cache y las 23 zonas en output/zones.
+    1. Genera los 17 GLBs sintéticos en un directorio temporal y las 23 zonas.
     2. Verifica la generación de los Atlas PBR 4x4 (4096x4096) y 2x2 (2048x2048).
-    3. Ejecuta Blender en modo headless para ensamblar y exportar output/car_final.glb.
-    4. Valida output/car_final.glb con glb_validator y verifica que el 100% de los checks pasen.
+    3. Ejecuta Blender en modo headless para ensamblar y exportar car_final.glb.
+    4. Valida car_final.glb con glb_validator y verifica que el 100% de los checks pasen.
     """
-    cache_dir = PROJECT_ROOT / "output" / "_base_cache"
-    zones_dir = PROJECT_ROOT / "output" / "zones"
-    output_glb = PROJECT_ROOT / "output" / "car_final.glb"
+    cache_dir = tmp_path / "_base_cache"
+    zones_dir = tmp_path / "zones"
+    output_glb = tmp_path / "car_final.glb"
     spec_path = PROJECT_ROOT / "config" / "car_spec.json"
 
     # Paso 1: Generar 17 GLBs mock y 23 zonas
@@ -120,7 +120,7 @@ def test_full_pipeline_e2e_blender_and_validator() -> None:
     assert len(zone_paths) == len(REQUIRED_23_NODES) == 23
 
     # Paso 2: Verificar generación de Atlas PBR
-    atlas_dir = PROJECT_ROOT / "output" / "_atlases"
+    atlas_dir = tmp_path / "_atlases"
     mech_atlases = build_mechanical_atlas(cache_dir, atlas_dir, atlas_size=4096)
     body_atlases = build_body_atlas(cache_dir, atlas_dir, atlas_size=2048)
 
