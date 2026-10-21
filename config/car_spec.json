@@ -12,104 +12,104 @@
   },
   "base_parts": {
     "engine": {
-      "prompt": "Modern automotive 4-cylinder turbo engine block with intake manifold, metallic aluminum and dark steel PBR texture, isolated 3D game asset",
-      "target_polycount": 4500,
+      "prompt": "Modern automotive inline-4 DOHC turbo engine block, intake manifold, alternator belt pulley, turbocharger, cast aluminum and dark steel, clean hard-surface 3D game asset, isolated on neutral background, no pedestal",
+      "target_polycount": 5500,
       "category": "mechanical",
       "atlas_cell": [0, 0]
     },
     "transmission": {
-      "prompt": "Automotive automatic transmission gearbox casing, ribbed cast aluminum housing, isolated mechanical 3D asset",
-      "target_polycount": 3500,
+      "prompt": "Automotive longitudinal automatic transmission gearbox, bellhousing, ribbed cast aluminum casing, torque converter housing, output shaft, mechanical hard-surface 3D asset, isolated, no pedestal",
+      "target_polycount": 4000,
       "category": "mechanical",
       "atlas_cell": [1, 0]
     },
     "cooling": {
-      "prompt": "Car front radiator core with dual electric cooling fans and coolant hoses, aluminum fins and black plastic shroud, isolated 3D asset",
-      "target_polycount": 3000,
+      "prompt": "Car front radiator assembly, aluminum cooling fin core, dual electric cooling fans in black shroud, upper and lower radiator coolant hoses, isolated 3D asset, no pedestal",
+      "target_polycount": 3500,
       "category": "mechanical",
       "atlas_cell": [2, 0]
     },
     "fuel_system": {
-      "prompt": "Automotive underbody fuel tank with fuel pump module and supply lines, molded high density polymer and metal straps, isolated 3D asset",
-      "target_polycount": 2500,
+      "prompt": "Automotive underbody fuel tank, molded black high-density polymer, fuel pump sender module, metal mounting straps, fuel supply lines, isolated 3D asset, no pedestal",
+      "target_polycount": 3000,
       "category": "mechanical",
       "atlas_cell": [3, 0]
     },
     "exhaust": {
-      "prompt": "Complete car exhaust system with catalytic converter, resonator pipe, and dual rear muffler tips, brushed stainless steel, isolated 3D asset",
-      "target_polycount": 3500,
+      "prompt": "Complete car exhaust system, dual downpipe, catalytic converter, central resonator pipe, rear muffler box with twin polished chrome tips, stainless steel, isolated 3D asset, no pedestal",
+      "target_polycount": 4000,
       "category": "mechanical",
       "atlas_cell": [0, 1]
     },
     "electrical": {
-      "prompt": "Automotive alternator, fuse box relay module, and main wiring harness loom with connectors, copper and black insulated cables, isolated 3D asset",
-      "target_polycount": 2500,
+      "prompt": "Automotive alternator with grooved pulley, starter motor, fuse relay box, main wiring harness loom with corrugated black conduit and multi-pin connectors, isolated 3D asset, no pedestal",
+      "target_polycount": 3000,
       "category": "mechanical",
       "atlas_cell": [1, 1]
     },
     "battery": {
-      "prompt": "12V automotive lead-acid car battery with positive and negative top terminal clamps, black and red casing, isolated 3D asset",
-      "target_polycount": 2000,
+      "prompt": "12V automotive car battery, textured black rectangular casing, red positive terminal clamp, blue negative terminal, top carry handle, isolated 3D asset, no pedestal",
+      "target_polycount": 2200,
       "category": "mechanical",
       "atlas_cell": [2, 1]
     },
     "ac_climate": {
-      "prompt": "Automotive air conditioning compressor, condenser coil, and evaporator lines, aluminum and rubber hoses, isolated 3D asset",
-      "target_polycount": 2500,
+      "prompt": "Automotive air conditioning compressor with electromagnetic pulley, aluminum refrigerant hardlines, condenser coil, isolated mechanical 3D asset, no pedestal",
+      "target_polycount": 3000,
       "category": "mechanical",
       "atlas_cell": [3, 1]
     },
     "suspension_base": {
-      "prompt": "Automotive independent axle suspension assembly with coilover springs, shock absorbers, control arms, and subframe, painted steel, isolated 3D asset",
-      "target_polycount": 4000,
+      "prompt": "Independent double-wishbone car suspension assembly, MacPherson coilover spring and damper strut, steel lower control arm, anti-roll stabilizer bar, painted black steel, isolated 3D asset, no pedestal",
+      "target_polycount": 4500,
       "category": "mechanical",
       "atlas_cell": [0, 2]
     },
     "brakes_base": {
-      "prompt": "Pair of automotive ventilated disc brake rotors with high-performance calipers and hub assembly, machined steel, isolated 3D asset",
-      "target_polycount": 3000,
+      "prompt": "Pair of drilled and slotted ventilated disc brake steel rotors, large multi-piston red brake calipers with hydraulic brake fluid lines, wheel hub, isolated 3D asset, no pedestal",
+      "target_polycount": 3500,
       "category": "mechanical",
       "atlas_cell": [1, 2]
     },
     "steering": {
-      "prompt": "Automotive rack and pinion steering gear assembly with tie rods, steering column shaft, and steering wheel, isolated 3D asset",
-      "target_polycount": 3000,
+      "prompt": "Automotive rack and pinion steering gear assembly with rubber bellows boots, tie rods, steering column shaft, and three-spoke leather sport steering wheel, isolated 3D asset, no pedestal",
+      "target_polycount": 3500,
       "category": "mechanical",
       "atlas_cell": [2, 2]
     },
     "wheel_base": {
-      "prompt": "Single modern sport alloy car wheel rim mounted with rubber radial tire featuring detailed tread pattern, dark rubber and silver rim, isolated 3D asset",
-      "target_polycount": 3500,
+      "prompt": "Single modern 5-spoke silver alloy car wheel rim mounted with low-profile radial rubber tire, detailed deep tire tread pattern, central wheel cap, isolated 3D asset, no pedestal",
+      "target_polycount": 4000,
       "category": "wheel",
       "atlas_cell": null
     },
     "body_front": {
-      "prompt": "Front section of modern sedan car body shell including front bumper, grille, hood, front fenders, A-pillars and dark tinted front windshield glass, isolated 3D asset",
-      "target_polycount": 7000,
+      "prompt": "Front car body shell of modern sedan, front bumper with honeycomb grille, aerodynamic hood, front fenders, A-pillars, dark tinted windshield glass, clean automotive sheet metal, isolated, no pedestal",
+      "target_polycount": 7500,
       "category": "body",
       "atlas_cell": [0, 0]
     },
     "body_rear": {
-      "prompt": "Rear section of modern sedan car body shell including trunk lid, rear bumper, rear quarter panels, C-pillars, dark tinted rear window glass and red taillight housings, isolated 3D asset",
-      "target_polycount": 7000,
+      "prompt": "Rear car body shell of modern sedan, rear bumper with diffuser, trunk lid with integrated lip, rear quarter panels, C-pillars, dark tinted rear window glass, red horizontal LED taillight bar, isolated, no pedestal",
+      "target_polycount": 7500,
       "category": "body",
       "atlas_cell": [1, 0]
     },
     "body_side_base": {
-      "prompt": "Left side doors, rocker panel, B-pillar, roof rail and dark tinted side windows of modern sedan car body, isolated 3D asset",
-      "target_polycount": 6000,
+      "prompt": "Side body doors and panels of modern sedan, front and rear doors with flush door handles, side mirror, B-pillar, rocker panel side skirt, tinted side window glass, isolated, no pedestal",
+      "target_polycount": 6500,
       "category": "body",
       "atlas_cell": [0, 1]
     },
     "lights": {
-      "prompt": "Automotive front LED projector headlight assemblies and daytime running light strips, clear polycarbonate lens and chrome reflectors, isolated 3D asset",
-      "target_polycount": 3000,
+      "prompt": "Pair of modern automotive LED projector headlights, clear crystalline polycarbonate lens, inner daytime running light DRL halos, chrome reflectors, isolated 3D asset, no pedestal",
+      "target_polycount": 3500,
       "category": "light",
       "atlas_cell": null
     },
     "interior": {
-      "prompt": "Car cabin interior with front bucket seats, rear bench seat, center console, dashboard cockpit and door panels, dark leather and trim, isolated 3D asset",
-      "target_polycount": 6500,
+      "prompt": "Complete modern car cabin interior, two front sport bucket seats, rear bench seat, center console with gear shifter, dashboard cockpit with digital screen, dark charcoal leather, isolated 3D asset, no pedestal",
+      "target_polycount": 7000,
       "category": "interior",
       "atlas_cell": null
     }
