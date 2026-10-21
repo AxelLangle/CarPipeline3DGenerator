@@ -56,7 +56,7 @@ def run_generate(
     spec_path: Path,
     cache_dir: Path,
     zones_dir: Path,
-    max_workers: int = 4,
+    max_workers: Optional[int] = None,
     mock: bool = False,
 ) -> None:
     """Subcomando generate: genera las 17 piezas base (con Meshy AI o mock sintético) y puebla las 23 zonas."""
@@ -134,7 +134,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_gen.add_argument("--spec", type=Path, default=PROJECT_ROOT / "config" / "car_spec.json")
     p_gen.add_argument("--cache-dir", type=Path, default=PROJECT_ROOT / "output" / "_base_cache")
     p_gen.add_argument("--zones-dir", type=Path, default=PROJECT_ROOT / "output" / "zones")
-    p_gen.add_argument("--max-workers", type=int, default=4)
+    p_gen.add_argument("--max-workers", type=int, default=int(os.getenv("MESHY_MAX_WORKERS", 2)))
     p_gen.add_argument("--mock", action="store_true", help="Usa el generador sintético local en vez de Meshy AI")
 
     # Subcomando: assemble
@@ -154,7 +154,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_all.add_argument("--cache-dir", type=Path, default=PROJECT_ROOT / "output" / "_base_cache")
     p_all.add_argument("--zones-dir", type=Path, default=PROJECT_ROOT / "output" / "zones")
     p_all.add_argument("--output-glb", type=Path, default=PROJECT_ROOT / "output" / "car_final.glb")
-    p_all.add_argument("--max-workers", type=int, default=4)
+    p_all.add_argument("--max-workers", type=int, default=int(os.getenv("MESHY_MAX_WORKERS", 2)))
     p_all.add_argument("--mock", action="store_true", help="Usa GLBs sintéticos locales para pruebas sin API Key")
     p_all.add_argument("--blender-exe", type=str, default=None)
 
